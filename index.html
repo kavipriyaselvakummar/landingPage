@@ -3,19 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Music Landing Page</title>
+  <title>Gaming Landing Page</title>
 
   <style>
+
     *{
       margin:0;
       padding:0;
       box-sizing:border-box;
-      font-family: Arial, sans-serif;
+      font-family:Arial, sans-serif;
     }
 
     body{
-      background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
-      url("https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f");
+      background:
+      linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+      url("https://images.unsplash.com/photo-1542751110-97427bbecf20");
       background-size:cover;
       background-position:center;
       height:100vh;
@@ -30,9 +32,10 @@
     }
 
     .logo{
-      font-size:32px;
+      font-size:35px;
       font-weight:bold;
-      color:#ff4da6;
+      color:#00ffff;
+      text-shadow:0 0 10px #00ffff;
     }
 
     .menu a{
@@ -44,7 +47,7 @@
     }
 
     .menu a:hover{
-      color:#ff4da6;
+      color:#00ffff;
     }
 
     .hero{
@@ -58,40 +61,71 @@
     }
 
     .hero h1{
-      font-size:70px;
+      font-size:75px;
+      text-transform:uppercase;
       margin-bottom:20px;
+      text-shadow:0 0 20px #00ffff;
     }
 
     .hero p{
-      font-size:22px;
       width:60%;
-      margin-bottom:30px;
+      font-size:22px;
       line-height:35px;
+      margin-bottom:35px;
     }
 
     .btn{
-      padding:15px 35px;
+      padding:15px 40px;
       border:none;
       border-radius:30px;
-      background:#ff4da6;
-      color:white;
+      background:#00ffff;
+      color:black;
       font-size:18px;
+      font-weight:bold;
       cursor:pointer;
       transition:0.3s;
+      box-shadow:0 0 15px #00ffff;
     }
 
     .btn:hover{
-      background:white;
-      color:#ff4da6;
+      background:transparent;
+      color:#00ffff;
+      border:2px solid #00ffff;
     }
 
-    .music-icons{
+    .games{
+      display:flex;
+      justify-content:center;
       margin-top:40px;
-      font-size:40px;
+      gap:20px;
+      flex-wrap:wrap;
     }
 
-    .music-icons span{
-      margin:15px;
+    .card{
+      width:180px;
+      height:220px;
+      background:rgba(255,255,255,0.1);
+      backdrop-filter:blur(5px);
+      border-radius:15px;
+      overflow:hidden;
+      transition:0.3s;
+      border:1px solid rgba(255,255,255,0.2);
+    }
+
+    .card img{
+      width:100%;
+      height:75%;
+      object-fit:cover;
+    }
+
+    .card h3{
+      text-align:center;
+      padding-top:10px;
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+      box-shadow:0 0 20px #00ffff;
     }
 
   </style>
@@ -100,33 +134,47 @@
 <body>
 
   <nav>
-    <div class="logo">MusicWave</div>
+    <div class="logo">GAMEZONE</div>
 
     <div class="menu">
       <a href="#">Home</a>
-      <a href="#">Playlist</a>
-      <a href="#">Artists</a>
-      <a href="#">Premium</a>
+      <a href="#">Games</a>
+      <a href="#">Tournaments</a>
+      <a href="#">Store</a>
       <a href="#">Contact</a>
     </div>
   </nav>
 
   <section class="hero">
-    <h1>Feel The Music</h1>
+
+    <h1>Level Up Your Game</h1>
 
     <p>
-      Stream millions of songs, discover trending artists,
-      and enjoy music anytime anywhere.
+      Enter the ultimate gaming universe with epic battles,
+      stunning graphics, and nonstop action.
     </p>
 
-    <button class="btn">Listen Now</button>
+    <button class="btn">Play Now</button>
 
-    <div class="music-icons">
-      <span>🎵</span>
-      <span>🎧</span>
-      <span>🎸</span>
-      <span>🥁</span>
+    <div class="games">
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420" alt="">
+        <h3>Cyber War</h3>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8" alt="">
+        <h3>Racing X</h3>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1547394765-185e1e68f34e" alt="">
+        <h3>Battle Arena</h3>
+      </div>
+
     </div>
+
   </section>
 
 </body>
